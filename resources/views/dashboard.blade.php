@@ -17,8 +17,6 @@
     <section class="row posts">
         <div class="col-md-6 col-md-offset-3">
             <header><h2>Timeline</h2></header>
-            https://github.com/ilhamtaufiq/laravel-social-network.git
-            
         </div>
     </section>
     <section class="row posts">
@@ -30,8 +28,9 @@
                         Posted by {{ $post->user->name }} on {{ $post->created_at }}
                     </div>
                     <div class="interaction">
-                        <a href="#" class="fa fa-thumbs-o-up" aria-hidden="true">Like</a> |
-                        <a href="#" class="fa fa-thumbs-o-down" aria-hidden="true">Dislike</a>
+                        <a href="#" class="fa fa-thumbs-o-up" aria-hidden="true"></a> |
+                        <a href="#" class="fa fa-thumbs-o-down" aria-hidden="true"></a> |
+                        <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="fa fa-trash-o" aria-hidden="true""></a>
                     </div>
                 </article>
             @endforeach

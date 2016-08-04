@@ -25,7 +25,7 @@ class PostController extends Controller
         $post->body = $request['body'];
         $message = 'There was an error';
         if ($request->user()->posts()->save($post)) {
-            $message = 'Your goodshit successfully created!';
+            $message = 'Postingan berhasil dibuat!';
         }
         return redirect()->route('dashboard')->with(['message' => $message]);
     }
@@ -34,6 +34,6 @@ class PostController extends Controller
     {
         $post = Post::where('id', $post_id)->first();
         $post->delete();
-        return redirect()->route('dashboard')->with(['messafe' => 'Post berhasil dihapus!']);
+        return redirect()->route('dashboard')->with(['message' => 'Post berhasil dihapus!']);
     }
 }
