@@ -17,6 +17,7 @@
     <section class="row posts">
         <div class="col-md-6 col-md-offset-3">
             <header><h2>Timeline</h2></header>
+            https://github.com/ilhamtaufiq/laravel-social-network.git
             
         </div>
     </section>
